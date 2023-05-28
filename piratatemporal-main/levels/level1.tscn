@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://config/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tileset/city_bg.tres" type="TileSet" id=2]
+[ext_resource path="res://config/door.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 126, 2425 )
+
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6302, 3027 )
